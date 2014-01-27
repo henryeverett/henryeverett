@@ -1,0 +1,84 @@
+@import "typography";
+
+body, html {
+	height:100%;
+}
+
+body {
+	-webkit-font-smoothing: antialiased;
+}
+
+.wrapper {
+	height: 100%;
+}
+
+header {
+	background: #68a3cc;
+	width: 100%;
+	overflow: hidden;
+	padding-top: 15px;
+	padding-left: 30px;
+	padding-bottom: 350px;
+	z-index: 30;
+}
+
+.header-content {
+	position: relative;
+}
+
+h1 {
+	color: #fff;
+	font-family: "patua_oneregular", serif;
+	font-size: 130px;
+	display: block;
+	max-width: 850px;
+	float: left;
+	line-height: 125px;
+}
+
+.contact {
+	margin-top: 80px;
+	float: left;
+	clear: both;
+
+	a {
+		display: block;
+		float: left;
+		height: 70px;
+		margin-right: 40px;
+
+		svg path {
+			fill: #fff;
+		}
+
+		&.email {
+			width: 100px;
+
+			&:hover svg path {
+				fill: #456c87;
+			}
+		}
+
+		&.twitter {
+			width: 85px;
+
+			&:hover svg path {
+				fill: #456c87;
+			}
+		}
+	}
+}
+
+.content {
+	overflow:hidden;
+}
+
+.content .row {
+	clear: both;
+	position: relative;
+	height: 100%;
+	min-height: 100%;
+	min-width: 100%;
+	background-color: #f5f5f5;
+	z-index: 10;
+}
