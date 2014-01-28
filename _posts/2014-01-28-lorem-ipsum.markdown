@@ -1,27 +1,11 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
-date:   2014-01-22 13:01:09
-categories: jekyll update
+title:  "Lorem Ipsum and its classical parallels to ancient Rome during Caesar's rule."
+date:   2014-01-28 13:01:09
+categories: lorem
 ---
 
-You'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes!
-To add new posts, simply add a file in the `_posts` directory that follows the convention: YYYY-MM-DD-name-of-post.ext.
-
-Jekyll also offers powerful support for code snippets:
-
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
-
-Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll's GitHub repo][jekyll-gh].
-
-[jekyll-gh]: https://github.com/mojombo/jekyll
-[jekyll]:    http://jekyllrb.com
+![My helpful screenshot]({{ site.url }}/assets/doves.jpg)
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium pharetra tempus. Sed condimentum ante et diam ultrices pellentesque. Nullam quis porttitor tellus, nec posuere mi. Nam tempus lacus nec metus ullamcorper, sed fringilla urna facilisis. Vestibulum in gravida erat, et adipiscing enim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam pellentesque ultrices iaculis. Suspendisse gravida ipsum eget consectetur interdum. Cras vel aliquet lorem, sed rutrum augue. Vivamus ultricies elit ac ante laoreet faucibus. Sed aliquet tellus nec fringilla pellentesque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec metus mauris, auctor sit amet pellentesque ut, elementum et nunc. Vivamus dapibus turpis non eleifend dignissim. Praesent sagittis erat eget enim blandit eleifend. Vivamus sit amet elit quis nulla tempus lobortis.
 

@@ -22,7 +22,7 @@ $( document ).ready(function() {
 				top: headerHeight*-1 + offsetTop
 			});
 
-			$(".content").css({
+			$("#content").css({
 				marginTop: headerHeight
 			});
 
@@ -35,7 +35,7 @@ $( document ).ready(function() {
 					top: ""
 				});
 
-				$(".content").css({
+				$("#content").css({
 					marginTop: 0
 				});
 			}
