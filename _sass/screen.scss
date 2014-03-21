@@ -6,15 +6,19 @@ body, html {
 
 body {
 	-webkit-font-smoothing: antialiased;
+	font-family: 'Sanchez', serif;
 }
 
 a {
 	color: #68a3cc;
 }
 
+p, ul {
+	font-size: 1.4em;
+}
+
 p {
-	font-size: 1.4rem;
-	font-family: 'Sanchez', serif;
+	text-align: justify;
 }
 
 code {
@@ -67,7 +71,7 @@ p.date {
 		font-size: 18px;
 		padding: 10px;
 		border-radius: 5px;
-		border: 2px solid #68a3cc;
+		border: 1px solid #68a3cc;
 		color: #68a3cc;
 	}
 }
@@ -117,6 +121,8 @@ p.date {
 .primary-column {
 	max-width: 960px;
 	padding-left: 30px;
+	padding-right: 30px;
+
 }
 
 #content .row {
@@ -153,6 +159,8 @@ article {
 
 ul.posts {
 
+	margin: 0;
+
 	li {
 		padding-top: 30px;
 	}
@@ -160,9 +168,13 @@ ul.posts {
 	list-style-type: none;
 }
 
+#content .last {
+	padding-bottom: 0;
+}
+
 footer {
+	background-color: #FDFCFC;
 	border-top: 1px solid #dadada;
-	overflow: hidden;
 }
 
 img.me {
@@ -174,8 +186,36 @@ img.me {
 
 
 p.bio {
-	height: 200px;
-	width: 500px;
+	max-width: 500px;
 	float: left;
-	padding-top: 65px;
+	//padding-top: 65px;
+	padding: 65px 30px 0;
+}
+
+
+@media only screen and (max-width: 40em) { 
+
+	h1 {
+		font-size: 80px;
+		line-height: 80px;
+	}
+
+	p, ul {
+		font-size: 1.2em;
+	}
+
+	img.me {
+		margin: -60px auto -20px;
+		display: block;
+		float: none;
+	}
+
+}
+
+@media only screen and (max-width:  64.063em) { 
+
+		p.bio {
+			float: none;
+			margin: 0 auto 30px;
+		}
 }
