@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Making the Game - Part 4</title>
+        <meta name="viewport" content="width=device-width">
+
+        <!-- foundation 5 -->
+        <link rel="stylesheet" href="/css/normalize.css">
+        <link rel="stylesheet" href="/css/foundation.min.css">
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/screen.css">
+        <link href='http://fonts.googleapis.com/css?family=Sanchez' rel='stylesheet' type='text/css'>
+
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+        <!--[if lt IE 9]>
+        <script src="/js/html5shiv.js"></script>
+        <![endif]-->
+        <script src="/js/jquery-1.10.2.min.js"></script>
+        <script src="/js/foundation.min.js"></script>
+        <script src="/js/site.js" type="text/javascript"></script>
+
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-44446703-1', 'henryeverett.info');
+          ga('send', 'pageview');
+
+        </script>
+    </head>
+    <body>
+
+
+
+        <div class="wrapper">
+          <header>
+            <div class="header-content">
+              <h1 class="title">My name is Henry and I make things.</h1>
+              <div class="contact">
+                <a href="mailto:me@henryeverett.info" class="email"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Your_Icon" x="0px" y="0px" width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+<path d="M95.393,0H4.607C2.067,0,0,2.067,0,4.607v60.459c0,2.54,2.067,4.607,4.607,4.607h90.786c2.541,0,4.607-2.067,4.607-4.607  V4.607C100,2.067,97.934,0,95.393,0z M95.393,65.066H4.606l0-60.46l90.786,0l0.004,60.459  C95.396,65.066,95.396,65.066,95.393,65.066z"/>
+<path d="M73.774,26c1.062-1.065,2.097-2.101,3.097-3.103c0.992-1.011,1.95-1.987,2.869-2.925c0.912-0.946,1.785-1.854,2.617-2.716  c0.822-0.871,1.609-1.69,2.338-2.472c1.462-1.56,2.725-2.93,3.755-4.071c2.063-2.276,3.201-3.622,3.201-3.622  s-1.437,1.021-3.883,2.88c-1.224,0.928-2.698,2.066-4.379,3.385c-0.844,0.657-1.729,1.369-2.668,2.111  c-0.933,0.75-1.914,1.539-2.939,2.361c-1.016,0.83-2.074,1.695-3.171,2.59c-1.09,0.902-2.216,1.835-3.373,2.795  c-2.307,1.927-4.729,3.969-7.217,6.1c-1.252,1.057-2.505,2.152-3.782,3.25c-0.638,0.548-1.28,1.101-1.925,1.655  c-0.643,0.557-1.287,1.117-1.934,1.679c-0.648,0.557-1.299,1.116-1.952,1.677c-0.653,0.553-1.305,1.118-1.942,1.646l-0.234,0.191  l-0.223,0.178l-0.06,0.046l-0.029,0.023l-0.066,0.047l-0.036,0.025c-0.005,0.003-0.008,0.005-0.004,0.002l-0.026,0.016l-0.103,0.066  c-0.273,0.171-0.535,0.304-0.774,0.402c-0.24,0.094-0.452,0.151-0.648,0.175c-0.197,0.025-0.384,0.018-0.599-0.01  c-0.425-0.058-0.988-0.275-1.597-0.617l-0.23-0.132l-0.221-0.134l-0.138-0.087l-0.069-0.043c0.026,0.017-0.003-0.003-0.002-0.003  l-0.019-0.014c-0.049-0.037-0.1-0.074-0.151-0.109l-0.461-0.358l-0.489-0.393c-1.312-1.068-2.656-2.17-3.968-3.267  c-1.32-1.097-2.63-2.185-3.924-3.26c-0.648-0.539-1.292-1.073-1.931-1.604c-0.643-0.528-1.281-1.051-1.914-1.571  c-2.527-2.083-4.991-4.077-7.334-5.959c-2.345-1.881-4.576-3.643-6.647-5.258c-2.072-1.613-3.982-3.08-5.688-4.367  c-1.705-1.287-3.2-2.399-4.442-3.304c-1.238-0.909-2.222-1.61-2.895-2.086C6.887,7.344,6.526,7.092,6.526,7.092  S6.82,7.419,7.373,8.031c0.555,0.609,1.373,1.5,2.428,2.615c1.052,1.119,2.343,2.464,3.835,3.993  c1.493,1.529,3.19,3.239,5.057,5.088c1.869,1.847,3.907,3.833,6.082,5.911c2.177,2.077,4.485,4.253,6.902,6.474  c1.203,1.117,2.438,2.239,3.694,3.369c0.136,0.123,0.272,0.246,0.409,0.369L6.526,62.284l33.38-22.771  c0.418,0.365,0.836,0.729,1.256,1.096c0.662,0.572,1.323,1.146,2.018,1.714l0.526,0.431l0.569,0.447l0.379,0.274l0.047,0.034  c0.023,0.016,0.016,0.012,0.064,0.043l0.069,0.044l0.137,0.088l0.337,0.208l0.336,0.197c0.458,0.258,0.944,0.508,1.49,0.723  c0.542,0.215,1.143,0.396,1.792,0.499c0.649,0.104,1.344,0.112,2.014,0.02c0.671-0.091,1.304-0.278,1.873-0.512  c0.566-0.237,1.079-0.515,1.541-0.811l0.172-0.112l0.138-0.092l0.066-0.047l0.066-0.048l0.101-0.076l0.199-0.154l0.286-0.232  l0.27-0.224c0.698-0.589,1.36-1.164,2.011-1.751c0.646-0.585,1.291-1.169,1.935-1.75c0.453-0.415,0.903-0.828,1.354-1.24l30.699,24  L64.934,34.565c0.697-0.655,1.388-1.308,2.063-1.961C69.37,30.336,71.636,28.118,73.774,26z"/>
+</svg></a>
+                <a href="https://twitter.com/henryeverett" target="_blank" class="twitter"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg viewBox="328 355 335 276" xmlns="http://www.w3.org/2000/svg">
+  <path d="
+    M 630, 425
+    A 195, 195 0 0 1 331, 600
+    A 142, 142 0 0 0 428, 570
+    A  70,  70 0 0 1 370, 523
+    A  70,  70 0 0 0 401, 521
+    A  70,  70 0 0 1 344, 455
+    A  70,  70 0 0 0 372, 460
+    A  70,  70 0 0 1 354, 370
+    A 195, 195 0 0 0 495, 442
+    A  67,  67 0 0 1 611, 380
+    A 117, 117 0 0 0 654, 363
+    A  65,  65 0 0 1 623, 401
+    A 117, 117 0 0 0 662, 390
+    A  65,  65 0 0 1 630, 425
+    Z"/>
+</svg>
+</a>
+              </div>
+            </div>
+          </header>
+
+          <section id="content">
+
+            <div class="row">
+              <div class="primary-column small-12 columns">
+                
+               <article>
+	<h2>Making the Game - Part 4</h2>
+	<p class="date"><span>21 Mar 2014</span></p>
+	<p>It&#39;s been a while since I posted last, and while this screenshot of the current game is pretty similar visually to the last one I posted, a lot has changed under the hood (Or bonnet for my fellow Brits).</p>
+
+<p><img src="/assets/game-shot-6.png" alt="Reset"></p>
+
+<p>I decided to tear the game apart and start again from scratch. This wasn&#39;t because the code I had written didn&#39;t work, it was just messy and disorganised. Now that I understood a little more about building a game, I was more confident about what the class structure should look like.</p>
+
+<p><img src="/assets/class-diagram-1.png" alt="Class Structure"></p>
+
+<p>Above is the class structure of the GameObject class type. A GameObject is basically any entity that lives within the level map as an interactive element. All GameObjects have their own update loop which is called from the main update loop.</p>
+
+<p>I decided to implement a component pattern which makes it really easy and really fun to create new GameObject descendants just by plugging in behaviour and logic modules. I split any physics, movement, collision detection into separate classes that could be easily to plug in to a GameObject and mixed and matched to create different behaviour.</p>
+
+<p>For example, the Actor subclass has movement, friction and gravity classes plugged in. This means that all subclasses of Actor (at this point the player and the enemy classes) will behave according to those rules. Now of course we want the player to have some different functionality to the enemies, so the Player class also has extra collision detection to detect whether it has interacted with another GameObject and a different movement input. The enemy class has an AI input plugged into it&#39;s movement module, and the player has the user&#39;s touch input.</p>
+
+<p>Another nifty little feature I have implemented is that the friction module will read the friction value of the tile that a game object is currently touching and change it&#39;s movement accordingly. For example, an &#39;ice&#39; tile will reduce the deceleration of the GameObject once it stops moving, giving a slippery effect.</p>
+
+	<p><a class="more" href="/">back</a></p>
+</article>
+
+
+              </div>
+            </div>
+
+          
+            <div class="last row">
+
+              <footer class="small-12 columns">
+                <img class="me" src="http://www.gravatar.com/avatar/53cf48b49016b9eb16a21c315c4dd9bb?s=200" />
+                <p class="bio">
+                  My name is Henry Everett. I'm <a href="http://dribbble.com/henrysoup" target="_blank">mostly</a> a web &amp; iOS developer. I live in Bristol in the UK. Favourite things: cats, coffee, dinosaurs, pizza. Follow me on <a href="https://twitter.com/henryeverett" target="_blank">Twitter</a> or <a href="mailto:me@henryeverett.info">email me</a>.
+                </p>
+              </footer>
+
+            </div>
+
+          </section>
+        </div>
+    </body>
+</html>
