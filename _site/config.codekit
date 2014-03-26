@@ -198,16 +198,6 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/_site\/js\/min\/foundation.min-ck.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_site\/js\/min\/foundation.min-ck.js",
-		"outputAbbreviatedPath": "\/_site\/js\/min\/min\/foundation.min-ck-ck.js",
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
 	"\/_site\/js\/site-ck.js": {
 		"fileType": 64,
 		"ignore": 0,

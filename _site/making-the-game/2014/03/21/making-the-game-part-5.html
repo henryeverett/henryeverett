@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Making the Game - Part 4</title>
+        <title>Making the Game - Part 5</title>
         <meta name="viewport" content="width=device-width">
 
         <!-- foundation 5 -->
@@ -83,23 +83,21 @@
               <div class="primary-column small-12 columns">
                 
                <article>
-	<h2>Making the Game - Part 4</h2>
+	<h2>Making the Game - Part 5</h2>
 	<p class="date"><span>21 Mar 2014</span></p>
-	<p>It&#39;s been a while since I posted last, and while this screenshot of the current game is pretty similar visually to the last one I posted, a lot has changed under the hood (or bonnet for my fellow Brits).</p>
+	<p>Collision detection is once of the most time consuming and complicated things you will have to deal with as a game developer. I knew that I could write about 5 lines of code to check for collisions on all of the objects on screen, but I also knew that it would be a very expensive operation. The number of collisions to check would be n^2-n as every object would have to check for a collision with every other object (excluding itself).</p>
 
-<p><img src="/assets/game-shot-6.png" alt="Reset"></p>
+<p><img src="/assets/spatial-diagram-1.png" alt="Lots of collision checks"></p>
 
-<p>I decided to tear the game apart and start again from scratch. This wasn&#39;t because the code I had written didn&#39;t work, it was just messy and disorganised. Now that I understood a little more about building a game, I was more confident about what the class structure should look like.</p>
+<p>I decided first of all, I would only check for collisions of nodes that are currently visible on the screen. This would be manageable with only 5 nodes on-screen (20 checks) but if a situation arises where 100 nodes are on screen (nearly 10,000 checks) the CPU is going to be under a lot of strain.</p>
 
-<p><img src="/assets/class-diagram-1.png" alt="Class Structure"></p>
+<p>So I went about looking for a solution to this problem and came across Spatial Hashing, a technique in which you divide the visible screen into a grid and then determine which nodes live in the same grid square. Those nodes would obviously be near each other and would therefore qualify for a collision check. An object in the top-left grid square, would not have to be collision-checked with an object in the bottom-right grid square for example as it is clear they are nowhere near each other.</p>
 
-<p>Above is the class structure of the GameObject class type. A GameObject is basically any entity that lives within the level map as an interactive element. All GameObjects have their own update loop which is called from the main update loop.</p>
+<p>Using this technique, we are now able to break collision detection into two phases. A broad phase and a narrow phase. The image above depicts the number of collision checks without spatial hashing and the image below shows the number of collisions with spatial hashing. The number has gone from 20 collision checks down to a meagre 2. Scale that up and that&#39;s a vast optimisation.</p>
 
-<p>I decided to implement a component pattern which makes it really easy and really fun to create new GameObject descendants just by plugging in behaviour and logic modules. I split any physics, movement and collision detection into separate classes that could be easily plugged into a GameObject, and mixed and matched to create different behaviour.</p>
+<p><img src="/assets/spatial-diagram-2.png" alt="Few collision checks"></p>
 
-<p>For example, the Actor subclass has movement, friction and gravity classes plugged into it. This means that all subclasses of Actor (at this point the player and the enemy classes) will behave according to those rules. Now of course we want the player to have some different functionality to the enemies, so the Player class also has extra abilities and a different movement input source. The enemy class has an AI input plugged into it&#39;s movement module, and the player has the user&#39;s touch input.</p>
-
-<p>Another nifty little feature I have implemented is the friction module which will read the friction value of the tile that a game object is currently touching and change it&#39;s movement accordingly. For example, an &#39;ice&#39; tile will reduce the deceleration of the GameObject once it stops moving, giving a slippery effect.</p>
+<p>A great explanation for this technique can be found here: <a href="http://conkerjo.wordpress.com/2009/06/13/spatial-hashing-implementation-for-fast-2d-collisions/" target="_blank">http://conkerjo.wordpress.com/2009/06/13/spatial-hashing-implementation-for-fast-2d-collisions/</a></p>
 
 	<p><a class="more" href="/">back</a></p>
 </article>
