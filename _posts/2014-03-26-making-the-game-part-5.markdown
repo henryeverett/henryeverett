@@ -5,7 +5,7 @@ date:   2014-03-21 17:34:00
 categories: making-the-game
 ---
 
-Collision detection is once of the most time consuming and complicated things you will have to deal with as a game developer. I knew that I could write about 5 lines of code to check for collisions on all of the objects on screen, but I also knew that it would be a very expensive operation. The number of collisions to check would be n^2-n as every object would have to check for a collision with every other object (excluding itself).
+Collision detection is once of the most time consuming and complicated things you will have to deal with when developing a game. I knew that I could write about 5 lines of code to check for collisions on all of the objects on screen, but this would be a very expensive operation. The number of collisions to check would be n^2-n as every object would have to check for a collision with every other object (excluding itself).
 
 ![Lots of collision checks]({{ site.url }}/assets/spatial-diagram-1.png)
 
