@@ -17,4 +17,5 @@ Using this technique, we are now able to break collision detection into two phas
 
 ![Few collision checks]({{ site.url }}/assets/spatial-diagram-2.png)
 
-A great guide to implementing this technique can be found here: <a href="http://conkerjo.wordpress.com/2009/06/13/spatial-hashing-implementation-for-fast-2d-collisions/" target="_blank">http://conkerjo.wordpress.com/2009/06/13/spatial-hashing-implementation-for-fast-2d-collisions/</a>
+A great guide to implementing this technique can be found here:
+<a href="http://conkerjo.wordpress.com/2009/06/13/spatial-hashing-implementation-for-fast-2d-collisions/" target="_blank">http://conkerjo.wordpress.com/2009/06/13/spatial-hashing-implementation-for-fast-2d-collisions/</a>
