@@ -5,7 +5,7 @@ date:   2014-03-21 17:34:00
 categories: making-the-game
 ---
 
-One of my objectives for this game is to make it "bulletproof". I don't want objects glitching through walls and I want to avoid the 'bullet-though-paper' effect as much as possible. This is where an object is moving fast enough that it passes straight through a platform. This happens because while there may be a platform in the direction of it's movement, neither it's current position or it's position in the next frame (which is beyond the platform) actually intersect with the platform. There are a few ways of dealing with this including techniques such as ray tracing or running multiple sweeps of the collision detection (but this is expensive). I opted for a technique called Speculative Contacts.
+One of my objectives for this game is to make it "bulletproof". I don't want objects glitching through walls and I want to avoid the 'bullet-though-paper' effect as much as possible. This is where an object is moving fast enough that it passes straight through a platform. This happens because while there may be a platform in the direction of its movement, neither its current position or its position in the next frame (which is beyond the platform) actually intersect with the platform. There are a few ways of dealing with this including techniques such as ray tracing or running multiple sweeps of the collision detection (but this is expensive). I opted for a technique called Speculative Contacts.
 
 ![Bad day for collisions.]({{ site.url }}/assets/bad-collision.png)
 
