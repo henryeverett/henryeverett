@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Making the Game - Part 3"
+title:  "Making the Game 3 - Stair Jumping"
 date:   2014-02-23 17:33:00
 categories: making-the-game
 ---

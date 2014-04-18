@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Making the Game - Part 5"
+title:  "Making the Game 5 - Broad Phase Collisions"
 date:   2014-03-21 17:34:00
 categories: making-the-game
 ---

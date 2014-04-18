@@ -23,9 +23,10 @@
         <!--[if lt IE 9]>
         <script src="/js/html5shiv.js"></script>
         <![endif]-->
-        <script src="/js/jquery-1.10.2.min.js"></script>
-        <script src="/js/foundation.min.js"></script>
-        <script src="/js/site.js" type="text/javascript"></script>
+        <script type="text/javascript" src="/js/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript" src="/js/foundation.min.js"></script>
+        <script type="text/javascript" src="/js/site.js" type="text/javascript"></script>
+        <script type="text/javascript" src="/js/jquery.githubRepoWidget.min.js"></script>
 
         <script>
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -81,13 +82,23 @@
 
             <div class="row">
               <div class="primary-column small-12 columns">
-                
+
                <ul class="posts">
 
   
 
     <li>
-      <h2><a href="/making-the-game/2014/03/21/making-the-game-part-5.html#content">Making the Game - Part 5</a></h2>
+      <h2><a href="/making-the-game/2014/03/21/making-the-game-part-6.html#content">Making the Game 6 - Narrow Phase Collisions</a></h2>
+
+      <p>One of my objectives for this game is to make it &quot;bulletproof&quot;. I don&#39;t want objects glitching through walls and I want to avoid the &#39;bullet-though-paper&#39; effect as much as possible. This is where an object is moving fast enough that it passes straight through a platform. This happens because while there may be a platform in the direction of it&#39;s movement, neither it&#39;s current position or it&#39;s position in the next frame (which is beyond the platform) actually intersect with the platform. There are a few ways of dealing with this including techniques such as ray tracing or running multiple sweeps of the collision detection (but this is expensive). I opted for a technique called Speculative Contacts.</p>
+
+      <a href="/making-the-game/2014/03/21/making-the-game-part-6.html#content" class="more">Read</a>
+   	</li>
+
+  
+
+    <li>
+      <h2><a href="/making-the-game/2014/03/21/making-the-game-part-5.html#content">Making the Game 5 - Broad Phase Collisions</a></h2>
 
       <p>Collision detection is once of the most time consuming and complicated things you will have to deal with when developing a game. I knew that I could write about 5 lines of code to check for collisions on all of the objects on screen, but this would be a very expensive operation. The number of collisions to check would be n^2-n as every object would have to check for a collision with every other object (excluding itself).</p>
 
@@ -97,7 +108,7 @@
   
 
     <li>
-      <h2><a href="/making-the-game/2014/03/21/making-the-game-part-4.html#content">Making the Game - Part 4</a></h2>
+      <h2><a href="/making-the-game/2014/03/21/making-the-game-part-4.html#content">Making the Game 4 - Class Hierarchy</a></h2>
 
       <p>It&#39;s been a while since I posted last, and while this screenshot of the current game is pretty similar visually to the last one I posted, a lot has changed under the hood (or bonnet for my fellow Brits).</p>
 
@@ -107,7 +118,7 @@
   
 
     <li>
-      <h2><a href="/making-the-game/2014/02/23/making-the-game-part-3.html#content">Making the Game - Part 3</a></h2>
+      <h2><a href="/making-the-game/2014/02/23/making-the-game-part-3.html#content">Making the Game 3 - Stair Jumping</a></h2>
 
       <p>A problem that I ran into today was one amidst the ongoing battle of collision detection. When jumping up a straight-edged stairway, the player (who I have affectionately dubbed: &quot;Squareface&quot;) would automatically stick to the next step if he was already pushed up against the edge of that step. This is because when he reached the height of the next step&#39;s &quot;floor&quot;, the collision detection would try to stick him to the ground. Resulting in a very unnatural on-rails type movement.</p>
 
@@ -117,7 +128,7 @@
   
 
     <li>
-      <h2><a href="/making-the-game/2014/02/22/making-the-game-part-2.html#content">Making the Game - Part 2</a></h2>
+      <h2><a href="/making-the-game/2014/02/22/making-the-game-part-2.html#content">Making the Game 2 - Overview</a></h2>
 
       <p>It is very important to me that I get the gameplay right. This is more important than anything else in my opinion. It needs to feel responsive and polished. Think about the most successful platformers throughout gaming history; which ones excelled? Sonic and Mario should spring to most people&#39;s minds. These two games got it right. The feel, the speed and the weight of your character just felt right. Within a minute or two you understood exactly how that character should be controlled. It was easy and intuitive but at the same time had enough nuance that you could master the game in time for the more difficult levels.</p>
 
@@ -127,7 +138,7 @@
   
 
     <li>
-      <h2><a href="/making-the-game/2014/02/19/making-the-game-part-1.html#content">Making the Game - Part 1</a></h2>
+      <h2><a href="/making-the-game/2014/02/19/making-the-game-part-1.html#content">Making the Game 1 - From Scratch</a></h2>
 
       <p>When I was a young boy, I loved video games. My most-loved titles were Sonic the Hedgehog, Mario and The Legend of Zelda. I remember fondly the excitement of getting a new game and slotting in that brand new cartridge. I used to dream of one day making my own game. I would sketch out levels on paper and imagine that I was playing them. 20 years later and I&#39;m now a web/iOS developer looking for a project to work on. I have decided to tap into my inner child and make that game I always wanted to. With no previous game development experience, it&#39;s going to be a long battle but I have started by making three important decisions about this game, the rest is subject to change as I go:</p>
 
@@ -141,7 +152,7 @@
               </div>
             </div>
 
-          
+
             <div class="last row">
 
               <footer class="small-12 columns">

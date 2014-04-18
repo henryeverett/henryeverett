@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Making the Game - Part 4"
+title:  "Making the Game 4 - Class Hierarchy"
 date:   2014-03-21 17:33:00
 categories: making-the-game
 ---

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Making the Game - Part 2"
+title:  "Making the Game 2 - Overview"
 date:   2014-02-22 11:15:00
 categories: making-the-game
 ---

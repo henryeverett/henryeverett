@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Making the Game - Part 1"
+title:  "Making the Game 1 - From Scratch"
 date:   2014-02-19 11:31:00
 categories: making-the-game
 ---

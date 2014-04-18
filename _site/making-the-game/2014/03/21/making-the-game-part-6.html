@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Making the Game 4 - Class Hierarchy</title>
+        <title>Making the Game 6 - Narrow Phase Collisions</title>
         <meta name="viewport" content="width=device-width">
 
         <!-- foundation 5 -->
@@ -84,23 +84,24 @@
               <div class="primary-column small-12 columns">
 
                <article>
-	<h2>Making the Game 4 - Class Hierarchy</h2>
+	<h2>Making the Game 6 - Narrow Phase Collisions</h2>
 	<p class="date"><span>21 Mar 2014</span></p>
-	<p>It&#39;s been a while since I posted last, and while this screenshot of the current game is pretty similar visually to the last one I posted, a lot has changed under the hood (or bonnet for my fellow Brits).</p>
+	<p>One of my objectives for this game is to make it &quot;bulletproof&quot;. I don&#39;t want objects glitching through walls and I want to avoid the &#39;bullet-though-paper&#39; effect as much as possible. This is where an object is moving fast enough that it passes straight through a platform. This happens because while there may be a platform in the direction of it&#39;s movement, neither it&#39;s current position or it&#39;s position in the next frame (which is beyond the platform) actually intersect with the platform. There are a few ways of dealing with this including techniques such as ray tracing or running multiple sweeps of the collision detection (but this is expensive). I opted for a technique called Speculative Contacts.</p>
 
-<p><img src="/assets/game-shot-6.png" alt="Reset"></p>
+<p><img src="/assets/bad-collision.png" alt="Bad day for collisions."></p>
 
-<p>I decided to tear the game apart and start again from scratch. This wasn&#39;t because the code I had written didn&#39;t work, it was just messy and disorganised. Now that I understood a little more about building a game, I was more confident about what the class structure should look like.</p>
+<p>Speculative contacts solves the bullet-through-paper problem by detecting whether there will be a collision in the next frame, and if so, reducing the velocity of the moving object just enough so that it comes to a stop right before the collision in the next frame.</p>
 
-<p><img src="/assets/class-diagram-1.png" alt="Class Structure"></p>
+<p><img src="/assets/good-collision.png" alt="Great day for collisions!"></p>
 
-<p>Above is the class structure of the GameObject class type. A GameObject is basically any entity that lives within the level map as an interactive element. All GameObjects have their own update loop which is called from the main update loop.</p>
+<p>I decided that there weren&#39;t enough resources to help with this subject, so I have made my code (and the Spacial Hashing code from <a href="/making-the-game/2014/03/21/making-the-game-part-5.html#content">my previous post</a>) open source and available to view or to slot into your own project.</p>
 
-<p>I decided to implement a component pattern which makes it really easy and really fun to create new GameObject descendants just by plugging in behaviour and logic modules. I split any physics, movement and collision detection into separate classes that could be easily plugged into a GameObject, and mixed and matched to create different behaviour.</p>
+<div class="github-widget" data-repo="henryeverett/ToastCollisions2D"></div>
 
-<p>For example, the Actor subclass has movement, friction and gravity classes plugged into it. This means that all subclasses of Actor (at this point the player and the enemy classes) will behave according to those rules. Now of course we want the player to have some different functionality to the enemies, so the Player class also has extra abilities and a different movement input source. The enemy class has an AI input plugged into it&#39;s movement module, and the player has the user&#39;s touch input.</p>
+<p>Please note that this is still a work in progress and I will iron out bugs as I go. If you feel like you can make it better, please fork and send over a pull request or submit a ticket!</p>
 
-<p>Another nifty little feature I have implemented is the friction module which will read the friction value of the tile that a game object is currently touching and change it&#39;s movement accordingly. For example, an &#39;ice&#39; tile will reduce the deceleration of the GameObject once it stops moving, giving a slippery effect.</p>
+<p>An excellent tutorial by Paul Firth (and most of the code found in ToastCollisions2D) on the Speculative Contacts technique can be found here:
+<a href="http://www.wildbunny.co.uk/blog/2011/12/14/how-to-make-a-2d-platform-game-part-2-collision-detection/" target="_blank">http://www.wildbunny.co.uk/blog/2011/12/14/how-to-make-a-2d-platform-game-part-2-collision-detection/</a></p>
 
 	<p><a class="more" href="/">back</a></p>
 </article>

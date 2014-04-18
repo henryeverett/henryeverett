@@ -135,6 +135,9 @@ ul.posts {
 #content .last {
   padding-bottom: 0; }
 
+.github-widget {
+  margin: 60px 0px; }
+
 footer {
   background-color: #F5F5F5;
   border-top: 1px solid #dadada; }
