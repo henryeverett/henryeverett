@@ -34,3 +34,7 @@ switch (collision.direction) {
                 break;
         }
 {% endhighlight %}
+
+
+ToastCollisions2D can be downloaded or forked from github.
+<div class="github-widget" data-repo="henryeverett/ToastCollisions2D"></div>
