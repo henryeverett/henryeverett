@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Making the Game 6 - Narrow Phase Collisions</title>
+        <title>How to make one-way tiles in ToastCollisions2D</title>
         <meta name="viewport" content="width=device-width">
 
         <!-- foundation 5 -->
@@ -84,24 +84,36 @@
               <div class="primary-column small-12 columns">
 
                <article>
-	<h2>Making the Game 6 - Narrow Phase Collisions</h2>
-	<p class="date"><span>21 Mar 2014</span></p>
-	<p>One of my objectives for this game is to make it &quot;bulletproof&quot;. I don&#39;t want objects glitching through walls and I want to avoid the &#39;bullet-though-paper&#39; effect as much as possible. This is where an object is moving fast enough that it passes straight through a platform. This happens because while there may be a platform in the direction of its movement, neither its current position or its position in the next frame (which is beyond the platform) actually intersect with the platform. There are a few ways of dealing with this including techniques such as ray tracing or running multiple sweeps of the collision detection (but this is expensive). I opted for a technique called Speculative Contacts.</p>
+	<h2>How to make one-way tiles in ToastCollisions2D</h2>
+	<p class="date"><span>22 Apr 2014</span></p>
+	<p>ToastCollisions2D was updated today to support one-way tiles with the introduction of the new protocol method: <strong>ignoresCollision:</strong>.</p>
 
-<p><img src="/assets/bad-collision.png" alt="Bad day for collisions."></p>
+<p>When performing collision resolution, the engine will now query this to check if it returns YES. If it does, the collision is ignored. This allows you to specify (either in a subclass of SKSpriteNode or a category extension) when a collision should be ignored.</p>
 
-<p>Speculative contacts solves the bullet-through-paper problem by detecting whether there will be a collision in the next frame, and if so, reducing the velocity of the moving object just enough so that it comes to a stop right before the collision in the next frame.</p>
+<p>This is perfect for one-way tiles. In my game, I have implemented <strong>ignoresCollision</strong> in an SKSpriteNode &quot;tile&quot; category. Then I simply check the direction of the collision using the <strong>direction</strong> property of the passed in TC_Collision object and return YES if the collision direction is up, left or right. To prevent embedding, I also ignore the down direction if the distance between the player is less than zero.</p>
 
-<p><img src="/assets/good-collision.png" alt="Great day for collisions!"></p>
+<div class="highlight"><pre><code class="objc"><span class="k">switch</span> <span class="p">(</span><span class="n">collision</span><span class="p">.</span><span class="n">direction</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">case</span> <span class="n">up</span>:
+                <span class="k">return</span> <span class="nb">YES</span><span class="p">;</span>
+                <span class="k">break</span><span class="p">;</span>
 
-<p>I decided that there weren&#39;t enough resources to help with this subject, so I have made my code (and the Spacial Hashing code from <a href="/making-the-game/2014/03/21/making-the-game-part-5.html#content">my previous post</a>) open source and available to view or to slot into your own project.</p>
+            <span class="k">case</span> <span class="n">left</span>:
+                <span class="k">return</span> <span class="nb">YES</span><span class="p">;</span>
+                <span class="k">break</span><span class="p">;</span>
 
-<div class="github-widget" data-repo="henryeverett/ToastCollisions2D"></div>
+            <span class="k">case</span> <span class="n">right</span>:
+                <span class="k">return</span> <span class="nb">YES</span><span class="p">;</span>
+                <span class="k">break</span><span class="p">;</span>
 
-<p>Please note that this is still a work in progress and I will iron out bugs as I go. If you feel like you can make it better, please fork and send over a pull request or submit a ticket!</p>
+            <span class="k">case</span> <span class="n">down</span>:
+                <span class="k">return</span> <span class="p">(</span><span class="n">collision</span><span class="p">.</span><span class="n">distance</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">);</span>
+                <span class="k">break</span><span class="p">;</span>
 
-<p>An excellent tutorial by Paul Firth (and most of the code found in ToastCollisions2D) on the Speculative Contacts technique can be found here:
-<a href="http://www.wildbunny.co.uk/blog/2011/12/14/how-to-make-a-2d-platform-game-part-2-collision-detection/" target="_blank">http://www.wildbunny.co.uk/blog/2011/12/14/how-to-make-a-2d-platform-game-part-2-collision-detection/</a></p>
+            <span class="nl">default:</span>
+                <span class="k">return</span> <span class="nb">NO</span><span class="p">;</span>
+                <span class="k">break</span><span class="p">;</span>
+        <span class="p">}</span>
+</code></pre></div>
 
 	<p><a class="more" href="/">back</a></p>
 </article>
