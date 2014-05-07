@@ -88,11 +88,11 @@ p.date {
     display: block;
     float: left;
     height: 70px;
-    margin-right: 40px; }
+     }
     .contact a svg path {
       fill: #fff; }
     .contact a.email {
-      width: 100px; }
+      width: 100px; margin-right: 40px; }
       .contact a.email:hover svg path {
         fill: #456c87; }
     .contact a.twitter {

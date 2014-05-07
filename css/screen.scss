@@ -108,7 +108,6 @@ p.date {
 		display: block;
 		float: left;
 		height: 70px;
-		margin-right: 40px;
 
 		svg path {
 			fill: #fff;
@@ -116,6 +115,7 @@ p.date {
 
 		&.email {
 			width: 100px;
+			margin-right: 40px;
 
 			&:hover svg path {
 				fill: #456c87;
