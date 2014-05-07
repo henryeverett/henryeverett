@@ -29,33 +29,42 @@ code {
 
 header {
   background: #68a3cc;
-  width: 100%;
+  width: 600px;
   overflow: hidden;
   padding-top: 15px;
   padding-left: 30px;
-  padding-bottom: 350px;
-  z-index: 30; }
+  padding-right: 30px;
+  padding-bottom: 60px;
+  z-index: 30;
+  position: fixed;
+  height: 100%; }
+  @media only screen and (max-width: 60em) {
+    header {
+      position: static;
+      width: 100%;
+      height: auto; } }
 
 .header-content {
   position: relative; }
 
 h1 {
+  margin-top: 20px;
   color: #fff;
-  font-size: 130px;
+  font-size: 92px;
   display: block;
-  max-width: 850px;
+  max-width: 550px;
   float: left;
-  line-height: 125px; }
+  line-height: 90px; }
 
 h2, h2 a {
-  color: #181818;
-  font-size: 48px;
+  color: #4b4b4b;
+  font-size: 42px;
   margin-bottom: 20px; }
 
 h2 a:hover {
-  color: #68a3cc; }
+  color: #428cbf; }
 
-h1, h2 {
+h1 {
   font-family: "patua_oneregular", serif; }
 
 p.date {
@@ -72,7 +81,7 @@ p.date {
   margin-bottom: 10px; }
 
 .contact {
-  margin-top: 80px;
+  margin-top: 40px;
   float: left;
   clear: both; }
   .contact a {
@@ -92,12 +101,17 @@ p.date {
         fill: #456c87; }
 
 #content {
-  overflow: hidden; }
+  overflow: hidden;
+  margin-left: 600px; }
+  @media only screen and (max-width: 60em) {
+    #content {
+      margin-left: 0; } }
 
 .primary-column {
   max-width: 960px;
   padding-left: 30px;
-  padding-right: 30px; }
+  padding-right: 30px;
+  max-width: 925px; }
 
 #content .row {
   clear: both;
@@ -105,7 +119,6 @@ p.date {
   height: 100%;
   min-height: 100%;
   min-width: 100%;
-  background-color: #FDFCFC;
   padding-bottom: 100px;
   z-index: 10; }
 
@@ -139,7 +152,7 @@ ul.posts {
   margin: 60px 0px; }
 
 footer {
-  background-color: #F5F5F5;
+  background-color: #FCFCFC;
   border-top: 1px solid #dadada; }
 
 img.me {
@@ -149,24 +162,20 @@ img.me {
   float: left; }
 
 p.bio {
-  max-width: 500px;
+  max-width: 425px;
   float: left;
   padding: 52px 30px 0;
   font-size: 23px; }
 
 @media only screen and (max-width: 40em) {
-  h1 {
-    font-size: 80px;
-    line-height: 80px; }
-
   p, ul {
-    font-size: 23px; }
-
+    font-size: 23px; } }
+@media only screen and (max-width: 80em) {
   img.me {
     margin: -60px auto -20px;
     display: block;
-    float: none; } }
-@media only screen and (max-width: 64.063em) {
+    float: none; }
+
   p.bio {
     float: none;
     margin: 0 auto 30px; } }

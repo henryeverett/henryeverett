@@ -1,3 +1,5 @@
 name: I am Henry and I make things
 markdown: redcarpet
 pygments: true
+sass:
+    sass_dir: _sass
