@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Making the Game 6 - Sprite Kit Texture Animation"
+title:  "Making the Game 6 - The Sprite Kit Texture Atlas"
 date:   2014-05-07 19:44:00
 categories: making-the-game
 ---
@@ -13,7 +13,7 @@ Accessing the individual textures is as easy as referencing the original image n
 
 {% highlight objc %}
 	SKTextureAtlas *atlas = [SKTextureAtlas atlasNamed:@"toast"];
-SKTexture *walkAnim1  = [atlas textureNamed:@"toast_walk_1.png"];
+	SKTexture *walkAnim1  = [atlas textureNamed:@"toast_walk_1.png"];
 {% endhighlight %}
 
 But it's not all moonlight and roses. Sprite Kit does have a couple of bugs to be aware of. Let's say that you have two textures of a bouncing ball. In the first, the ball is on the ground, in the second, the ball in the air. When you animate between the two, you may want the frame of the sprite to stay the same while the ball moves up. Sprite Kit unfortunately doesn't care about this and will crop out any transparency around the image, meaning you get two different sized textures.
