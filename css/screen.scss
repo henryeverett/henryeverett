@@ -24,6 +24,10 @@ p {
 	line-height: 1.5em;
 }
 
+ol, ol p:first-child {
+  font-weight: bold;
+}
+
 code {
 	color: #444;
 }
@@ -68,7 +72,7 @@ h1 {
 h2, h2 a {
 	color: lighten(#181818, 20%);
 	
-	font-size: 42px;
+	font-size: 38px;
 	margin-bottom: 20px;
 }
 
@@ -170,7 +174,7 @@ a.more {
 	border-radius: 5px;
 	background: #68a3cc;
 	color: #fff;
-	margin: 30px 0;
+	margin: 20px 0;
 
 	&:hover {
 		background: #7EB6DD;

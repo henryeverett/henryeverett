@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Henry Everett - Making the Game 5 - Broad Phase Collisions</title>
+        <title>Henry Everett - How I Built an App in 2 days</title>
         <meta name="viewport" content="width=device-width">
         <meta name="description" content="My name is Henry Everett. I'm mostly a web and iOS developer from the UK.">
         <meta name="keywords" content="objective-c,games,programming,coding,tutorials,blog,articles,developer,freelancer,iOS,iPhone">
@@ -86,22 +86,50 @@
               <div class="primary-column small-12 columns">
 
                <article>
-	<h2>Making the Game 5 - Broad Phase Collisions</h2>
-	<p class="date"><span>21 Mar 2014</span></p>
-	<p>Collision detection is once of the most time consuming and complicated things you will have to deal with when developing a game. I knew that I could write about 5 lines of code to check for collisions on all of the objects on screen, but this would be a very expensive operation. The number of collisions to check would be n^2-n as every object would have to check for a collision with every other object (excluding itself).</p>
+	<h2>How I Built an App in 2 days</h2>
+	<p class="date"><span>13 May 2014</span></p>
+	<p>So you want to know how I managed to design and build an iPhone App and a web-based API from scratch in just two days? Here&#39;s the short answer: a lot of coffee and short-cuts.</p>
 
-<p><img src="/assets/spatial-diagram-1.png" alt="Lots of collision checks"></p>
+<p>It all started late last Friday evening. My plans for the weekend had just been unexpectedly cancelled so I had two days with nothing to do ahead of me. The weather was pretty gross, so a rainy day activity it would have to be. I decided I would set myself a challenge: I would build something cool by midnight on Sunday.</p>
 
-<p>I decided first of all, I would only check for collisions of nodes that are currently visible on the screen. This would be manageable with only 5 nodes on-screen (20 checks) but if a situation arises where 100 nodes are on screen (nearly 10,000 checks) the CPU is going to be under a lot of strain.</p>
+<p>Rather than rattle on about the various decision processes I went through and a thesis about why I chose a particular library, here&#39;s a conveniently sized list of ten things I did to get it done:</p>
 
-<p>So I went about looking for a solution to this problem and came across Spatial Hashing, a technique in which you divide the visible screen into a grid and then determine which nodes live in the same grid square. Those nodes would obviously be near each other and would therefore qualify for a collision check. An object in the top-left grid square, would not have to be collision-checked with an object in the bottom-right grid square for example as it is clear they are nowhere near each other.</p>
+<ol>
+<li><p>Stay up late (but not too late)</p>
 
-<p>Using this technique, we are now able to break collision detection into two phases. A broad phase and a narrow phase. The image above depicts the number of collision checks without spatial hashing and the image below shows the number of collisions with spatial hashing. The number has gone from 20 collision checks down to a meagre 2. Scale that up and that&#39;s a vast optimisation.</p>
+<p>2am was my cut-off point, after that my productivity generally nose-dives and I suffer the next day.</p></li>
+<li><p>Drink too much coffee</p>
 
-<p><img src="/assets/spatial-diagram-2.png" alt="Few collision checks"></p>
+<p>My <a href="http://www.aeropresscoffee.com/" target="_blank">Aeropress</a> was one of the most important tools I used in the building of this app.</p></li>
+<li><p>Use libraries for all the things.</p>
 
-<p>A great guide to implementing this technique can be found here:
-<a href="http://conkerjo.wordpress.com/2009/06/13/spatial-hashing-implementation-for-fast-2d-collisions/" target="_blank">http://conkerjo.wordpress.com/2009/06/13/spatial-hashing-implementation-for-fast-2d-collisions/</a></p>
+<p>Some I used: <a href="https://github.com/Mantle/Mantle/" target="_blank">Mantle</a> (for object mapping), <a href="https://github.com/gonzalezreal/Overcoat" target="_blank">Overcoat</a> (for http requests), <a href="https://github.com/rails-api/rails-api" target="_blank">Rails-API</a> (a stripped down fork of Rails), <a href="https://github.com/rs/SDWebImage" target="_blank">SDWebIMage</a> (for image caching). Don&#39;t reinvent the wheel.</p></li>
+<li><p>Don&#39;t unit test</p>
+
+<p>What?? Yes, not a single test was written for any of my code. Don&#39;t get me wrong though - for bigger or more important projects, testing is a very good idea.</p></li>
+<li><p>Keep it simple</p>
+
+<p>Every time I thought of a feature I could add, I would tell myself &quot;No, leave it for version 1.1&quot;. </p></li>
+<li><p>Stick with what you&#39;re unfamiliar with</p>
+
+<p>I have been writing an iOS game recently and haven&#39;t touched Autolayout or Interface Builder for a while, so I stuck with what I knew best at the time which was to turn off Autolayout and manually write CGRects EVERYWHERE.</p></li>
+<li><p>Code only for the scenarios you need</p>
+
+<p>I&#39;m going to have complete control over the API data, so it doesn&#39;t matter that my app doesn&#39;t automatically adjust its layout if some of the content doesn&#39;t fit. Solution: don&#39;t add content that doesn&#39;t fit.</p></li>
+<li><p>Auth? What auth?</p>
+
+<p>The api consists of two models and a controller with one index method. That&#39;s all I needed. For now I&#39;m the only person who will be adding content so I just wrote a short seed script to dump a YAML file. Why make it any more complicated than that?</p></li>
+<li><p>Don&#39;t over-design</p>
+
+<p>I had a rough idea in my head of what the app should look like, so I just dived straight into Illustrator and started creating the design. No time for sketches or wireframes.</p></li>
+<li><p>Write messy, undocumented code</p>
+
+<p>I need to go in and refactor a lot of code for 1.1, but for now who cares? It works and nobody else is going to see that largely redundant, tangled mess!</p></li>
+</ol>
+
+<p>In summary, if you want to get something out there fast, don&#39;t over think or over engineer it. Ship it as an MVP and write a nice list of things to make it better for the next iteration. The process of shipping something is satisfying and likely to propel you forward and avoid that project boredom dip.</p>
+
+<p>If you&#39;re feeling adventurous, come and <a href="https://twitter.com/henryeverett">follow me on Twitter!</a></p>
 
 	<p><a class="more" href="/">back</a></p>
 </article>
