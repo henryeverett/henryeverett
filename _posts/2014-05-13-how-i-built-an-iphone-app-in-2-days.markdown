@@ -5,7 +5,7 @@ date:   2014-05-13 19:28:00
 categories: iphone
 ---
 
-So you want to know how I managed to design and build an iPhone App and a web-based API from scratch in just two days? Here's the short answer: a lot of coffee and short-cuts.
+So you want to know how I to designed and built <a href="http://moonlitapp.com/" target="_blank">Moonlit</a>, an iPhone App and a web-based API, from scratch in just two days? Here's the short answer: a lot of coffee and short-cuts.
 
 It all started late last Friday evening. My plans for the weekend had just been unexpectedly cancelled so I had two days with nothing to do ahead of me. The weather was pretty gross, so a rainy day activity it would have to be. I decided I would set myself a challenge: I would build something cool by midnight on Sunday.
 
@@ -52,5 +52,7 @@ Rather than rattle on about the various decision processes I went through and a 
 	I need to go in and refactor a lot of code for 1.1, but for now who cares? It works and nobody else is going to see that largely redundant, tangled mess!
 
 In summary, if you want to get something out there fast, don't over think or over engineer it. Ship it as an MVP and write a nice list of things to make it better for the next iteration. The process of shipping something is satisfying and likely to propel you forward and avoid that project boredom dip.
+
+<a href="https://itunes.apple.com/app/moonlit-bristol-do-something/id877299039/" target="_blank">Moonlit is available on Apple's App Store.</a>
 
 If you're feeling adventurous, come and <a href="https://twitter.com/henryeverett">follow me on Twitter!</a>
