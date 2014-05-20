@@ -18,3 +18,5 @@ I performed a second test using the same application but this time running the S
 ![IO Profiler]({{ site.url }}/assets/io-profiler.png)
 
 This confirms that Sprite Kit indeed does its own memory management of the texture atlas, loading the image once and keeping it as long as it's needed. This negates the need for a singleton pattern in order to keep the heap small, leaving you with the time to get on with more important matters like launching the 631st clone of Flappy Bird.
+
+To keep up to date with my latest Sprite Kit ramblings <a href="https://twitter.com/henryeverett">follow me on Twitter!</a>
