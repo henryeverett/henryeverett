@@ -5,7 +5,7 @@ date:   2014-05-13 19:28:00
 categories: iphone
 ---
 
-So you want to know how I to designed and built <a href="http://moonlitapp.com/" target="_blank">Moonlit</a>, an iPhone App and a web-based API, from scratch in just two days? Here's the short answer: a lot of coffee and short-cuts.
+So you want to know how I to designed and built <a href="http://moonlitapp.com/" target="_blank">Moonlit</a>: an iPhone App and a web-based API from scratch in just two days? Here's the short answer: a lot of coffee and short-cuts.
 
 It all started late last Friday evening. My plans for the weekend had just been unexpectedly cancelled so I had two days with nothing to do ahead of me. The weather was pretty gross, so a rainy day activity it would have to be. I decided I would set myself a challenge: I would build something cool by midnight on Sunday.
 
