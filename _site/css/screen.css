@@ -15,15 +15,14 @@ a {
   color: #68a3cc; }
 
 p, ul {
-  font-size: 20px; }
+  font-size: 22px; }
 
 p {
   text-align: justify;
   line-height: 1.5em; }
 
 ol, ol p:first-child {
-  font-weight: bold;
-}
+  font-weight: bold; }
 
 code {
   color: #444; }
@@ -91,12 +90,12 @@ p.date {
   .contact a {
     display: block;
     float: left;
-    height: 70px;
-     }
+    height: 70px; }
     .contact a svg path {
       fill: #fff; }
     .contact a.email {
-      width: 100px; margin-right: 40px; }
+      width: 100px;
+      margin-right: 40px; }
       .contact a.email:hover svg path {
         fill: #456c87; }
     .contact a.twitter {
@@ -115,7 +114,7 @@ p.date {
   max-width: 960px;
   padding-left: 30px;
   padding-right: 30px;
-  max-width: 925px;}
+  max-width: 925px; }
 
 #content .row {
   clear: both;
@@ -169,11 +168,14 @@ p.bio {
   max-width: 425px;
   float: left;
   padding: 52px 30px 0;
-  font-size: 23px; }
+  font-size: 22px; }
 
 @media only screen and (max-width: 40em) {
   p, ul {
-    font-size: 23px; } }
+    font-size: 23px; }
+
+  h1 {
+    display: none; } }
 @media only screen and (max-width: 80em) {
   img.me {
     margin: -60px auto -20px;
