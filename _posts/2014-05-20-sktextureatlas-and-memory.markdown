@@ -2,7 +2,7 @@
 layout: post
 title:  "SKTextureAtlas and Memory"
 date:   2014-05-20 22:44:00
-categories: iphone
+categories: sprite-kit
 ---
 
 I have seen a few posts detailing how you should create a singleton to deal with your textures in Apple's Sprite Kit. This got me thinking. Is this really necessary? I try to avoid singletons as much as possible and my upcoming Sprite Kit game is no exception.
