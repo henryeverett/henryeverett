@@ -81,7 +81,8 @@ p.date {
     color: #68a3cc; }
 
 .highlight {
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  background: #F7F7F7; }
 
 .contact {
   margin-top: 40px;

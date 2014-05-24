@@ -10,20 +10,23 @@ If you're like me and you like to load multiple animations from one texture atla
 There are a few ways of doing this, but my method below negates the need to declare the number of frames in the animation.
 
 {% highlight objc %}
-- (NSInteger)numberOfFramesInAnimation:(NSString *)animationName {
-		// Get a list of all the file names in the atlas
+- (NSInteger)numberOfFrames:(NSString *)animationName {
+	// Get a list of all the file names in the atlas
     NSArray *allAnimationNames = self.textureAtlas.textureNames;
+
     // Filter the list by the particular animation name
     NSPredicate *nameFilter = [NSPredicate predicateWithFormat:@"SELF CONTAINS[cd] %@",[self textureNameBaseForAction:animationName]];
+
     // Return the number of filtered frames
     return [[allAnimationNames filteredArrayUsingPredicate:nameFilter] count];
 }
 {% endhighlight %}
 
+
 Easy! All you need to do then is use a for loop and use the method above for the condition.
 
 {% highlight objc %}
-for (NSInteger i = 1; i < [self numberOfFramesInAnimation:animationName]+1; i++) {
+for (NSInteger i = 0; i < [self numberOfFrames:animationName]; i++) {
 
 // Do stuff
 
