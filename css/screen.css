@@ -18,7 +18,8 @@ p, ul {
   font-size: 22px; }
 
 p {
-  text-align: justify; }
+  text-align: justify;
+  font-weight: lighter; }
 
 ol, ol p:first-child {
   font-weight: bold; }
