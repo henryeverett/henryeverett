@@ -92,7 +92,7 @@
 
 <p>This is where Swift becomes really useful. Using the &#39;as&#39; keyword, Swift fully supports downcasting. Let&#39;s see how we could solve the above problem in Swift code:</p>
 
-<div class="highlight"><pre><code class="objc"><span class="k">for</span> <span class="n">phone</span> <span class="k">in</span> <span class="n">fetchedPhones</span> <span class="p">{</span>
+<div class="highlight"><pre><code class="language-objc" data-lang="objc"><span class="k">for</span> <span class="n">phone</span> <span class="k">in</span> <span class="n">fetchedPhones</span> <span class="p">{</span>
         <span class="k">if</span> <span class="n">let</span> <span class="n">iPhone</span> <span class="o">=</span> <span class="n">phone</span> <span class="n">as</span><span class="o">?</span> <span class="n">IPhone</span> <span class="p">{</span>
                 <span class="n">println</span><span class="p">(</span><span class="s">&quot;Do I have touch ID? &quot;</span> <span class="o">+</span> <span class="p">((</span><span class="n">iPhone</span><span class="p">.</span><span class="n">touchID</span><span class="p">)</span> <span class="o">?</span> <span class="s">&quot;Yes!&quot;</span> <span class="o">:</span> <span class="s">&quot;No.&quot;</span><span class="p">))</span>
         <span class="p">}</span>

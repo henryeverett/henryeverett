@@ -94,24 +94,24 @@
 
 <p>This is perfect for one-way tiles. In my game, I have implemented <strong>ignoresCollision</strong> in an SKSpriteNode &quot;tile&quot; category. Then I simply check the direction of the collision using the <strong>direction</strong> property of the passed in TC_Collision object and return YES if the collision direction is up, left or right. To prevent embedding, I also ignore the down direction if the distance between the player is less than zero.</p>
 
-<div class="highlight"><pre><code class="objc"><span class="k">switch</span> <span class="p">(</span><span class="n">collision</span><span class="p">.</span><span class="n">direction</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">case</span> <span class="n">up</span>:
+<div class="highlight"><pre><code class="language-objc" data-lang="objc"><span class="k">switch</span> <span class="p">(</span><span class="n">collision</span><span class="p">.</span><span class="n">direction</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">case</span> <span class="nl">up</span><span class="p">:</span>
                 <span class="k">return</span> <span class="nb">YES</span><span class="p">;</span>
                 <span class="k">break</span><span class="p">;</span>
 
-            <span class="k">case</span> <span class="n">left</span>:
+            <span class="k">case</span> <span class="nl">left</span><span class="p">:</span>
                 <span class="k">return</span> <span class="nb">YES</span><span class="p">;</span>
                 <span class="k">break</span><span class="p">;</span>
 
-            <span class="k">case</span> <span class="n">right</span>:
+            <span class="k">case</span> <span class="nl">right</span><span class="p">:</span>
                 <span class="k">return</span> <span class="nb">YES</span><span class="p">;</span>
                 <span class="k">break</span><span class="p">;</span>
 
-            <span class="k">case</span> <span class="n">down</span>:
+            <span class="k">case</span> <span class="nl">down</span><span class="p">:</span>
                 <span class="k">return</span> <span class="p">(</span><span class="n">collision</span><span class="p">.</span><span class="n">distance</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">);</span>
                 <span class="k">break</span><span class="p">;</span>
 
-            <span class="nl">default:</span>
+            <span class="k">default</span><span class="o">:</span>
                 <span class="k">return</span> <span class="nb">NO</span><span class="p">;</span>
                 <span class="k">break</span><span class="p">;</span>
         <span class="p">}</span></code></pre></div>

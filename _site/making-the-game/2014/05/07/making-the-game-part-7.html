@@ -94,8 +94,8 @@
 
 <p>Accessing the individual textures is as easy as referencing the original image name:</p>
 
-<div class="highlight"><pre><code class="objc"><span class="n">SKTextureAtlas</span> <span class="o">*</span><span class="n">atlas</span> <span class="o">=</span> <span class="p">[</span><span class="n">SKTextureAtlas</span> <span class="n">atlasNamed</span><span class="o">:</span><span class="s">@&quot;toast&quot;</span><span class="p">];</span>
-    <span class="n">SKTexture</span> <span class="o">*</span><span class="n">walkAnim1</span>  <span class="o">=</span> <span class="p">[</span><span class="n">atlas</span> <span class="n">textureNamed</span><span class="o">:</span><span class="s">@&quot;toast_walk_1.png&quot;</span><span class="p">];</span></code></pre></div>
+<div class="highlight"><pre><code class="language-objc" data-lang="objc"><span class="bp">SKTextureAtlas</span> <span class="o">*</span><span class="n">atlas</span> <span class="o">=</span> <span class="p">[</span><span class="bp">SKTextureAtlas</span> <span class="nl">atlasNamed</span><span class="p">:</span><span class="s">@&quot;toast&quot;</span><span class="p">];</span>
+    <span class="bp">SKTexture</span> <span class="o">*</span><span class="n">walkAnim1</span>  <span class="o">=</span> <span class="p">[</span><span class="n">atlas</span> <span class="nl">textureNamed</span><span class="p">:</span><span class="s">@&quot;toast_walk_1.png&quot;</span><span class="p">];</span></code></pre></div>
 
 <p>But it&#39;s not all moonlight and roses. Sprite Kit does have a couple of bugs to be aware of. Let&#39;s say that you have two textures of a bouncing ball. In the first, the ball is on the ground, in the second, the ball in the air. When you animate between the two, you may want the frame of the sprite to stay the same while the ball moves up. Sprite Kit unfortunately doesn&#39;t care about this and will crop out any transparency around the image, meaning you get two different sized textures.</p>
 
