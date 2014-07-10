@@ -20,7 +20,7 @@ Pixel Burger was ready to go, but I had no idea of how to price it. From an unkn
 
 ![Pixel Burger launches today!]({{ site.url }}/assets/pixel-burger.png)
 
-And so Pixel Burger launched today on Apple App Store. Please <a href="###############">download it</a> and let me know what you think via <a href="https://twitter.com/henryeverett">twitter</a> or leave a review on the store. I would love to know what worked and what didn't so I can improve and grow as an iOS (and now indie game) developer.
+And so Pixel Burger launched today on Apple App Store. Please <a href="https://itunes.apple.com/app/pixel-burger/id890510774">download it</a> and let me know what you think via <a href="https://twitter.com/henryeverett">twitter</a> or leave a review on the store. I would love to know what worked and what didn't so I can improve and grow as an iOS (and now indie game) developer.
 
 Unfortunately, there seems to be a memory management bug in Sprite Kit on iOS 7.0, which means that I have had to submit a panicked re-release of the game to address it. Users who are experiencing the bug can either wait for the update or upgrade to 7.1. Just one of those things to chalk up to experience I guess. Luckily most iOS users are quick to update their devices.
 
