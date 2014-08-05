@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Pixel Burger - development post-mortem"
+title:  "Pixel Burger - Conception and development"
 date:   2014-07-10 17:37:00
 categories: sprite-kit
 ---

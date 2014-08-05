@@ -1,0 +1,232 @@
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+/* entypo */
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif; }
+
+@font-face {
+  font-family: 'patua_oneregular';
+  src: url("fonts/patuaone-regular-webfont.eot");
+  src: url("fonts/patuaone-regular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/patuaone-regular-webfont.woff") format("woff"), url("fonts/patuaone-regular-webfont.ttf") format("truetype"), url("fonts/patuaone-regular-webfont.svg#patua_oneregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'silkscreennormal';
+  src: url("fonts/slkscr-webfont.eot");
+  src: url("fonts/slkscr-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/slkscr-webfont.woff") format("woff"), url("fonts/slkscr-webfont.ttf") format("truetype"), url("fonts/slkscr-webfont.svg#silkscreennormal") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+body {
+  background-color: #fff;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Roboto', serif;
+  margin: 0;
+  padding: 0; }
+
+.title {
+  height: 530px;
+  width: 100%;
+  background-color: #68a3cc;
+  background-image: url("/assets/about/henry-bg.png");
+  background-repeat: no-repeat;
+  background-size: 487px 440px;
+  background-position: center;
+  padding-top: 80px; }
+  .title h1 {
+    margin-top: 10px; }
+
+.down-arrow {
+  width: 100px;
+  height: 100px;
+  background-image: url("/assets/about/down.png");
+  background-size: 100px;
+  margin: -105px auto 15px; }
+
+a.print {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 1.2em;
+  font-weight: lighter;
+  color: #36414D;
+  border: 1px solid #36414D;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 5px; }
+  a.print:hover {
+    color: #fff;
+    background-color: #36414D; }
+
+h1, .title h2 {
+  font-family: "patua_oneregular", serif;
+  font-size: 4em;
+  color: #fff;
+  text-align: center;
+  line-height: 72px; }
+
+.title h2 {
+  margin-top: -20px;
+  font-size: 2em; }
+
+h3 {
+  color: #68a3cc;
+  font-weight: normal; }
+
+p {
+  font-size: 1.5em;
+  font-weight: lighter;
+  text-align: justify; }
+
+.mugshot-wrap {
+  border-radius: 100px;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  background-color: white;
+  overflow: hidden; }
+  .mugshot-wrap .mugshot {
+    border-radius: 95px;
+    width: 190px;
+    height: 190px;
+    margin: 5px;
+    background: url("/assets/about/henry-face.png") no-repeat;
+    background-size: 300px;
+    background-position-x: -80px;
+    background-position-y: -6px; }
+
+.device {
+  height: 750px;
+  background-size: 379px auto;
+  background-position: center;
+  background-repeat: no-repeat; }
+  @media only screen and (min-width: 64.063em) {
+    .device.bottom {
+      margin-top: -260px; }
+    .device.top {
+      margin-bottom: -260px; } }
+  .device .screenshot {
+    width: 270px;
+    height: 481px;
+    margin: 135px auto;
+    background-size: 270px 481px; }
+  .device.white-5s {
+    background-image: url("/assets/about/devices/iphone-5s-white.png"); }
+  .device.black-5s {
+    background-image: url("/assets/about/devices/iphone-5s-black.png"); }
+  .device.blue-5c {
+    background-image: url("/assets/about/devices/iphone-5c-blue.png"); }
+
+.details {
+  position: relative;
+  padding: 60px 0; }
+
+a.icon-link {
+  color: #36414D;
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: lighter;
+  line-height: 50px;
+  height: 50px;
+  display: block; }
+  a.icon-link:hover {
+    color: #4b5a6b; }
+  a.icon-link span {
+    font-size: 1.8em;
+    padding-right: 10px;
+    vertical-align: middle; }
+
+h2.section-heading {
+  margin: 50px 0 30px;
+  text-align: center; }
+  h2.section-heading.about:before {
+    background: url("/assets/about/about-me.png") no-repeat;
+    background-size: 50px; }
+  h2.section-heading.skills:before {
+    background: url("/assets/about/skills.png") no-repeat;
+    background-size: 50px; }
+  h2.section-heading.experience:before {
+    background: url("/assets/about/experience.png") no-repeat;
+    background-size: 50px; }
+  h2.section-heading.education:before {
+    background: url("/assets/about/education.png") no-repeat;
+    background-size: 50px; }
+  h2.section-heading.portfolio-icon {
+    margin-bottom: 0; }
+    h2.section-heading.portfolio-icon:before {
+      background: url("/assets/about/portfolio.png") no-repeat;
+      background-size: 50px; }
+  h2.section-heading:before {
+    content: " ";
+    height: 50px;
+    width: 50px;
+    display: block;
+    margin: 0 auto; }
+
+span.skill {
+  background-color: #68a3cc;
+  color: #fff;
+  padding: 5px;
+  line-height: 50px;
+  border-radius: 10px; }
+  span.skill:hover {
+    background-color: #8ebad9; }
+
+.portfolio {
+  overflow: hidden;
+  min-height: 500px; }
+  .portfolio h2 {
+    text-align: center; }
+  .portfolio .desc {
+    margin-top: 20px; }
+    .portfolio .desc.desc-right {
+      float: right; }
+    .portfolio .desc p.portfolio-links {
+      margin: 40px 0px;
+      text-align: center; }
+      .portfolio .desc p.portfolio-links a {
+        background-color: #111;
+        border: 1px solid #fff;
+        color: #fff; }
+      @media only screen and (min-width: 64.063em) {
+        .portfolio .desc p.portfolio-links {
+          text-align: left; } }
+      .portfolio .desc p.portfolio-links a {
+        margin-left: 10px;
+        margin-right: 10px;
+        padding: 5px 10px;
+        border-radius: 10px; }
+        .portfolio .desc p.portfolio-links a span {
+          padding-right: 10px; }
+        @media only screen and (min-width: 64.063em) {
+          .portfolio .desc p.portfolio-links a {
+            margin-left: 0;
+            margin-right: 20px; } }
+  .portfolio.burger {
+    background: url("/assets/about/pixel-burger-bg.gif");
+    color: #fff; }
+    .portfolio.burger h2 {
+      text-indent: -9999px;
+      display: block;
+      height: 200px;
+      width: 240px;
+      margin: 0 auto 10px;
+      background: url("/assets/about/pixel-burger.png") no-repeat; }
+    .portfolio.burger .desc p.portfolio-links a:hover {
+      border-color: #FF0080;
+      color: #FF0080; }
+    .portfolio.burger blockquote {
+      color: #FF0080; }
+  .portfolio.moonlit {
+    background: url("/assets/about/moonlit-bg.png");
+    background-size: 400px;
+    color: #fff; }
+    .portfolio.moonlit h2 {
+      text-indent: -9999px;
+      display: block;
+      height: 76px;
+      width: 319px;
+      margin: 40px auto 20px;
+      background: url("/assets/about/moonlit.png") no-repeat;
+      background-size: 297px 53px; }
+    .portfolio.moonlit .desc p.portfolio-links a:hover {
+      border-color: #6cbb9b;
+      color: #6cbb9b; }
